@@ -1,0 +1,30 @@
+<p [style.background-color]="'red'">Styles</p>
+<p [style.background-color]="'red'" [style.width]="'100px'">Styles</p>
+<p [style.background-color]="'red'" [style.width.px]="100">Styles</p>
+<p style="background-color: red; width: 150px">Styles</p>
+<p [style.width.px]="100" [style]="'background-color: red; width: 150px'">Styles</p>
+<p [style]="{'background-color': 'red', width: '150px'}">Styles</p>
+
+<p [class.red]="true">Class</p>
+<p [class.red-blue]="true">Class</p>
+<p [class.blue]="true" [class.green]="true" [class.red]="true">Class</p>
+<p class="red green blue">Class</p>
+<p [class]="'red green blue'">Class</p>
+<p [class]="['red green blue']">Class</p>
+<p [class]="['red', 'green', 'blue']">Class</p>
+<p [class]="{red: true, green: false, 'dark-blue': true}">Class</p>
+
+<p>Attributes</p>
+<p title="title">Attributes</p>
+<p [title]="'title' + 12">Attributes</p>
+<p [draggable]="true" [title]="'title' + 12">Attributes</p>
+<p [attr.data-foo]="123">Attributes</p>
+<p [attr.draggable]="true">Attributes</p>
+<p [attr.class]="'foo'">Attributes</p>
+<p [attr.id]="'foo'">Attributes</p>
+<p [attr.title]="'foo'">Attributes</p>
+<p [attr.style]="'color: red'">Attributes</p>
+
+<td [colSpan]="1">1</td>
+<td colspan="1">1</td>
+<td [attr.colspan]="1">1</td>
