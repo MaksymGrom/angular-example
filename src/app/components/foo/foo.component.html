@@ -1,0 +1,31 @@
+<ng-content select="h1"></ng-content>
+<p>Foo Works</p>
+<ng-content></ng-content>
+
+<ng-container *ngIf="items.length">
+  <div *ngFor="let item of items">{{item}}</div>
+</ng-container>
+
+<p *ngIf="false; else: ifFalse">If True</p>
+<ng-template #ifFalse>
+  <p>If False</p>
+</ng-template>
+
+
+
+<ng-template #ref let-bar let-foo="foo">
+
+  <p>I am template {{bar}} {{foo}}</p>
+</ng-template>
+
+<ng-container *ngTemplateOutlet="ref; context: {$implicit: 42, foo: 123}"></ng-container>
+
+<ng-template #defaultItem let-item>
+  <p>{{item}}</p>
+</ng-template>
+
+<ng-container *ngIf="items.length">
+  <div *ngFor="let item of items">
+    <ng-container *ngTemplateOutlet="itemTemplate || defaultItem; context: {$implicit: item}"></ng-container>
+  </div>
+</ng-container>
