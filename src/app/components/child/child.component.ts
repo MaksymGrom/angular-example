@@ -31,38 +31,38 @@ export class ChildComponent implements
   title = '';
 
   constructor() {
-    console.log('ChildComponent.constructor');
+    // console.log('ChildComponent.constructor');
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('ChildComponent.ngOnChanges', changes);
+    // console.log('ChildComponent.ngOnChanges', changes);
   }
 
   ngOnInit(): void {
-    console.log('ChildComponent.ngOnInit');
+    // console.log('ChildComponent.ngOnInit');
   }
 
   ngDoCheck(): void {
-    console.log('ChildComponent.ngDoCheck');
+    // console.log('ChildComponent.ngDoCheck');
   }
 
   ngAfterContentInit(): void {
-    console.log('ChildComponent.ngAfterContentInit');
+    // console.log('ChildComponent.ngAfterContentInit');
   }
 
   ngAfterContentChecked(): void {
-    console.log('ChildComponent.ngAfterContentChecked');
+    // console.log('ChildComponent.ngAfterContentChecked');
   }
 
   ngAfterViewInit(): void {
-    console.log('ChildComponent.ngAfterViewInit');
+    // console.log('ChildComponent.ngAfterViewInit');
   }
 
   ngAfterViewChecked(): void {
-    console.log('ChildComponent.ngAfterViewChecked');
+    // console.log('ChildComponent.ngAfterViewChecked');
   }
 
   ngOnDestroy(): void {
-    console.log('ChildComponent.ngOnDestroy');
+    // console.log('ChildComponent.ngOnDestroy');
   }
 }
