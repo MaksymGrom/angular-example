@@ -65,4 +65,8 @@ export class ChildComponent implements
   ngOnDestroy(): void {
     console.log('ChildComponent.ngOnDestroy');
   }
+
+  sayHi() {
+    console.log('Hi from child component');
+  }
 }

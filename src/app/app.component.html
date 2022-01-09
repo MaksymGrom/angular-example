@@ -1,3 +1,14 @@
 <button (click)="show = !show">Toggle</button>
 <button (click)="title = title + '1'">Modify input</button>
-<app-parent *ngIf="show" [title]="title"></app-parent>
+<app-parent *ngIf="show" [title]="title">
+  <!--  <p #ref>test</p>-->
+  <!--  <app-child #ref [title]="title"></app-child>-->
+  <!--  <app-child #ref [title]="title"></app-child>-->
+  <!--  <app-child #ref [title]="title"></app-child>-->
+  <!--  <p #ref>test</p>-->
+
+  <p #foo>Skip</p>
+  <ng-template #bar let-item><p>1. {{item}}</p></ng-template>
+  <ng-template #bar let-item><b>2. {{item}}</b></ng-template>
+  <ng-template #baz let-item><i>3. {{item}}</i></ng-template>
+</app-parent>
