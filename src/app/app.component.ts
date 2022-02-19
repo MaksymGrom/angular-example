@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-project';
+  dateObject: Date = new Date();
+  timestamp: number = Date.now();
+  dateString: string = '2022-02-19';
 }
