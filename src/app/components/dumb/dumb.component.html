@@ -1,0 +1,5 @@
+<p *ngIf="user">
+  <span>User name is {{ user.name }}</span>
+  <span> User surname is {{ user.surname }}</span>
+  <button (click)="onDelete(user)">Delete user</button>
+</p>

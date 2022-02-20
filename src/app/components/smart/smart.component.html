@@ -1,0 +1,31 @@
+<p>smart works!</p>
+
+<app-dumb (delete)="onDelete($event)"
+          [user]="newUser$ | async"></app-dumb>
+
+<app-dumb (delete)="onDelete($event)"
+          *ngIf="newUser$ | async as user"
+          [user]="user"></app-dumb>
+
+<p>{{ value | async }}</p>
+<p>{{ value$ | async }}</p>
+
+<p>{{ name$ | async }}</p>
+
+<p *ngIf="name$ | async as name">
+  {{ name }}
+</p>
+
+<p *ngIf="user$ | async as user">
+  <span>User name is {{ user.name }}</span>
+  <span> User surname is {{ user.surname }}</span>
+</p>
+
+<p *ngIf="newUser$ | async as user">
+  <span>User name is {{ user.name }}</span>
+  <span> User surname is {{ user.surname }}</span>
+  <button (click)="onDelete(user)">Delete user</button>
+</p>
+
+<div (click)="onItemClick(item, items)"
+     *ngFor="let item of array$ | async as items">{{item}}</div>
