@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-project';
+  dataSource = [
+    {id: 42, name: 'John', surname: 'Doe', dob: '2003-04-15'},
+    {id: 777, name: 'Jenny', surname: 'Doe', dob: '2005-08-12'},
+  ];
+
+  displayedColumns = ['id', 'dob', 'name', 'surname'];
 }
