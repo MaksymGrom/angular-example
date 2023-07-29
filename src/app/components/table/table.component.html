@@ -12,7 +12,13 @@
   </tr>
   <tr *ngFor="let row of dataSource">
     <td *ngFor="let col of displayedColumns">
-      {{ row[col] }}
+      <ng-container
+        *ngTemplateOutlet="getCellTemplate(col) || defaultCell; context: {$implicit: row}"
+      ></ng-container>
+
+      <ng-template #defaultCell>
+        {{ row[col] }}
+      </ng-template>
     </td>
   </tr>
 </table>

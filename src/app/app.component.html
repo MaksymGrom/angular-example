@@ -3,4 +3,10 @@
   <ng-template appTableHeader="dob">Date of Birthday</ng-template>
   <ng-container *appTableHeader="'name'">First Name</ng-container>
   <span *appTableHeader="'surname'">Last Name</span>
+  <span *appTableHeader="'fullName'">Full Name</span>
+  <span *appTableHeader="'age'">Age</span>
+
+  <ng-template appTableCell="id" let-row>#{{ row.id }}</ng-template>
+  <ng-template appTableCell="fullName" let-row>{{ row['name'] }} {{ row['surname'] }}</ng-template>
+  <ng-template appTableCell="age" let-row>{{ fullAge(row['dob']) }}</ng-template>
 </app-table>

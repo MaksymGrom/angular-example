@@ -8,8 +8,21 @@ import { Component } from '@angular/core';
 export class AppComponent {
   dataSource = [
     {id: 42, name: 'John', surname: 'Doe', dob: '2003-04-15'},
-    {id: 777, name: 'Jenny', surname: 'Doe', dob: '2005-08-12'},
+    {id: 777, name: 'Jenny', surname: 'Doe', dob: '2005-07-31'},
   ];
 
-  displayedColumns = ['id', 'dob', 'name', 'surname'];
+  displayedColumns = ['id', 'age', 'dob', 'name', 'surname', 'fullName'];
+
+  fullAge(dob: string) {
+    const dobDate = new Date(dob);
+    const nowDate = new Date();
+    let diffYears = nowDate.getFullYear() - dobDate.getFullYear();
+
+    if (nowDate.getMonth() < dobDate.getMonth()
+    || (nowDate.getMonth() === dobDate.getMonth() && nowDate.getDate() < dobDate.getDate())) {
+      diffYears--;
+    }
+
+    return diffYears;
+  }
 }

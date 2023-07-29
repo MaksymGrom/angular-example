@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TableComponent } from './components/table/table.component';
 import { TableHeaderDirective } from './directives/table-header.directive';
+import { TableCellDirective } from './directives/table-cell.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
-    TableHeaderDirective
+    TableHeaderDirective,
+    TableCellDirective
   ],
   imports: [
     BrowserModule,
