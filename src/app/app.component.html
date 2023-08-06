@@ -572,3 +572,7 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <router-outlet></router-outlet>
+<button (click)="showGreen = !showGreen">Show Green</button>
+<button (click)="showRed = !showRed">Show Red</button>
+<app-baar *ngIf="showGreen"></app-baar>
+<app-foo *ngIf="showRed"></app-foo>
