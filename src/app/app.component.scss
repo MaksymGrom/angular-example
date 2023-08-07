@@ -1,0 +1,20 @@
+h1 {
+  color: yellow;
+}
+
+:host {
+  display: block;
+  border: 1px solid red;
+}
+
+app-foo {
+  border-color: black;
+}
+
+app-foo {
+  ::ng-deep {
+    h2 {
+      color: pink;
+    }
+  }
+}

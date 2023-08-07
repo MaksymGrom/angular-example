@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  border: 1px solid green;
+}
+
+h2 {
+  color: brown;
+}
+
+:host(.pink) {
+  border-color: pink;
+}
+
+:host-context(.dark) {
+  h2 {
+    background-color: black;
+    color: white;
+  }
+}
